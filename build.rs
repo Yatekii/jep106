@@ -8,7 +8,9 @@ fn main() {
     let dest_path = Path::new(&out_dir).join("jep106.rs");
     let mut f = File::create(&dest_path).unwrap();
 
-    let contents = pdf_extract::extract_text("JEP106AV.pdf")
+    let version = "JEP106AY";
+
+    let contents = pdf_extract::extract_text(version.to_owned() + ".pdf")
         .expect("Something went wrong reading the file");
 
     let mut data: Vec<Vec<String>> = vec![];
@@ -42,13 +44,12 @@ fn main() {
         const fn get(cc: u8, id: u8) -> &'static str {
             CODES[cc as usize][id as usize]
         }
-
-        // pub fn print_all() {
-        //     for bank in CODES.iter() {
-        //         for comp in bank.iter() {
-        //             println!(\"{:?}\", comp);
-        //         }
-        //     }
-        // }
     ").unwrap();
+
+    let _ = f.write_all(format!("
+        /// Returns the JEP106 specification version code.
+        pub const fn version() -> &'static str {{
+            \"{}\"
+        }}
+    ", version).as_bytes()).unwrap();
 }
