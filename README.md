@@ -1,5 +1,11 @@
 # jep106
 
+[![crates.io](http://meritbadge.herokuapp.com/jep106)](https://crates.io/crates/jep106)
+
+[![documentation](https://docs.rs/jep106/badge.svg)](https://docs.rs/lyon)
+
+[![Build Status](https://www.travis-ci.com/Yatekii/jep106.svg)](https://www.travis-ci.com/Yatekii/jep106)
+
 This crate provides a means to retrieve the JEDEC manufacturer string for a corresponding JEP106 ID Code.
 
 All the codes can be found on the page of the JEDEC organization but are presented in the riddiculous form of a PDF. This crate parses the PDF and exposes an interface to poll the JEDEC manufacturer string of a JEP106 ID code.
