@@ -59,4 +59,10 @@ impl std::fmt::Debug for JEP106Code {
     }
 }
 
+impl std::fmt::Display for JEP106Code {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        write!(f, "{}", self.get().unwrap_or("Unknown Manufacturer Code"))
+    }
+}
+
 include!(concat!(env!("OUT_DIR"), "/jep106.rs"));
