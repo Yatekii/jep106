@@ -12,7 +12,7 @@
 //! ```
 //! fn main() {
 //!     let nordic = jep106::JEP106Code::new(0x02, 0x44).get();
-//!     assert_eq!("Nordic VLSI ASA", nordic);
+//!     assert_eq!(Some("Nordic VLSI ASA"), nordic);
 //! }
 //! ```
 
@@ -40,7 +40,7 @@ impl JEP106Code {
     /// Returns the manufacturer corresponding to a complete JEP106 code.
     /// 
     /// Returns an empty string if the JEP106 code is unknown.
-    pub const fn get(&self) -> &'static str {
+    pub const fn get(&self) -> Option<&'static str> {
         get(self.cc, self.id)
     }
     
@@ -48,14 +48,14 @@ impl JEP106Code {
     /// a JEP106 continuation code and a JEP106 id code tuple.
     /// 
     /// Returns an empty string if the JEP106 code is unknown.
-    pub const fn get_raw(cc: u8, id: u8) -> &'static str {
+    pub const fn get_raw(cc: u8, id: u8) -> Option<&'static str> {
         get(cc, id)
     }
 }
 
 impl std::fmt::Debug for JEP106Code {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        write!(f, "JEP106Code({{ cc: 0x{:02x?}, id: 0x{:02x?} }} => {})", self.cc, self.id, self.get())
+        write!(f, "JEP106Code({{ cc: 0x{:02x?}, id: 0x{:02x?} }} => {:?})", self.cc, self.id, self.get())
     }
 }
 
