@@ -2,7 +2,7 @@
 
 [![crates.io](http://meritbadge.herokuapp.com/jep106)](https://crates.io/crates/jep106)
 
-[![documentation](https://docs.rs/jep106/badge.svg)](https://docs.rs/lyon)
+[![documentation](https://docs.rs/jep106/badge.svg)](https://docs.rs/jep106)
 
 [![Build Status](https://www.travis-ci.com/Yatekii/jep106.svg)](https://www.travis-ci.com/Yatekii/jep106)
 
