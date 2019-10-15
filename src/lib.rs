@@ -16,8 +16,10 @@
 //! }
 //! ```
 
+#[macro_use] extern crate serde;
+
 /// A Struct which contains a fully qualified JEP106 manufacturer code.
-#[derive(Copy, Clone, PartialEq, Eq)]
+#[derive(Copy, Clone, PartialEq, Eq, Serialize, Deserialize)]
 pub struct JEP106Code {
     /// JEP106 identification code.
     /// Points to a manufacturer name in the bank table corresponding to `cc`.

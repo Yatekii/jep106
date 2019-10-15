@@ -1,6 +1,6 @@
 [package]
 name = "jep106"
-version = "0.2.2"
+version = "0.2.3"
 authors = ["Noah Huesser <yatekii@yatekii.ch>", "Dominik Boehi <dominik.boehi@gmail.ch>"]
 edition = "2018"
 build = "build.rs"
@@ -12,6 +12,9 @@ readme = "README.md"
 categories = ["embedded", "hardware-support", "development-tools::debugging"]
 keywords = ["jep106", "embedded"]
 license = "MIT OR Apache-2.0"
+
+[dependencies]
+serde = { version = "1.0.101", features = ["derive"] }
 
 [build-dependencies]
 pdf-extract = "0.4.6"
