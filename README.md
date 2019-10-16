@@ -8,7 +8,10 @@
 
 This crate provides a means to retrieve the JEDEC manufacturer string for a corresponding JEP106 ID Code.
 
-All the codes can be found on the page of the JEDEC organization but are presented in the riddiculous form of a PDF. This crate parses the PDF and exposes an interface to poll the JEDEC manufacturer string of a JEP106 ID code.
+All the codes can be found on the page of the JEDEC organization but are presented in as a PDF. This crate contains the parsed data 
+from the PDF and exposes an interface to poll the JEDEC manufacturer string of a JEP106 ID code.
+
+The PDF is parsed by the [jep106-parse](https://github.com/Tiwalun/jep106-parser) helper crate.
 
 ## Status
 
@@ -18,6 +21,12 @@ The crate provides the JEP106AY Revision of the codes list which was published i
 
 See [docs](https://docs.rs/jep106/).
 
+## Development
+
+This crate only contains the library part of the jep106 crate. To change how the PDF itself is
+processed, check out the [jep106-parse](https://github.com/Tiwalun/jep106-parser) helper crate.
+
+
 ## License
 
 Licensed under either of
@@ -26,6 +35,7 @@ Licensed under either of
    http://www.apache.org/licenses/LICENSE-2.0)
  * MIT license ([LICENSE-MIT](LICENSE-MIT) or
    http://opensource.org/licenses/MIT) at your option.
+
 
 ### Contributing
 
