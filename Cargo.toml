@@ -3,7 +3,6 @@ name = "jep106"
 version = "0.2.3"
 authors = ["Noah Huesser <yatekii@yatekii.ch>", "Dominik Boehi <dominik.boehi@gmail.ch>"]
 edition = "2018"
-build = "build.rs"
 description = "A pollable collection of all JEP106 manufacturer codes."
 documentation = "https://docs.rs/jep106/"
 homepage = "https://github.com/Yatekii/jep106"
@@ -15,7 +14,3 @@ license = "MIT OR Apache-2.0"
 
 [dependencies]
 serde = { version = "1.0.101", features = ["derive"] }
-
-[build-dependencies]
-pdf-extract = "0.4.6"
-regex = "1.1.6"

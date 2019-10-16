@@ -16,7 +16,11 @@
 //! }
 //! ```
 
+mod codes;
+
 #[macro_use] extern crate serde;
+
+pub use codes::version;
 
 /// A Struct which contains a fully qualified JEP106 manufacturer code.
 #[derive(Copy, Clone, PartialEq, Eq, Serialize, Deserialize)]
@@ -67,4 +71,8 @@ impl std::fmt::Display for JEP106Code {
     }
 }
 
-include!(concat!(env!("OUT_DIR"), "/jep106.rs"));
+/// Returns the manufacturer corresponding to a complete JEP106 code.
+/// Returns an empty string if the JEP106 code is unknown.
+const fn get(cc: u8, id: u8) -> Option<&'static str> {
+    codes::CODES[cc as usize][id as usize]
+}
