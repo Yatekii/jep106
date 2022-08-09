@@ -8,14 +8,14 @@
 
 This crate provides a means to retrieve the JEDEC manufacturer string for a corresponding JEP106 ID Code.
 
-All the codes can be found on the page of the JEDEC organization but are presented in as a PDF. This crate contains the parsed data 
+All the codes can be found on the page of the JEDEC organization but are presented in as a PDF. This crate contains the parsed data
 from the PDF and exposes an interface to poll the JEDEC manufacturer string of a JEP106 ID code.
 
 The PDF is parsed by the [jep106-parse](https://github.com/Tiwalun/jep106-parser) helper crate.
 
 ## Status
 
-The crate provides the JEP106BD Revision of the codes list which was published in October 2021.
+The crate provides the JEP106BE Revision of the codes list which was published in January 2022.
 
 ## Usage
 
@@ -26,6 +26,19 @@ See [docs](https://docs.rs/jep106/).
 This crate only contains the library part of the jep106 crate. To change how the PDF itself is
 processed, check out the [jep106-parse](https://github.com/Tiwalun/jep106-parser) helper crate.
 
+### Step to use `jep106-parse`
+
+```bash
+# clone the repo
+git clone https://github.com/Tiwalun/jep106-parser.git
+cd jep106-parser
+# Download the latest version of the PDF, say, JEP106BE.pdf
+# Then run the following command to parse the PDF and generate the `codes.rs`
+cargo run -- --pdf JEP106BE.pdf --jep_version BE
+# Copy the `codes.rs` to the src/ folder and format it
+mv codes.rs /path/to/jep106/src/codes.rs
+cargo fmt
+```
 
 ## License
 
