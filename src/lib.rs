@@ -80,13 +80,13 @@ impl std::fmt::Display for JEP106Code {
 const fn get(cc: u8, id: u8) -> Option<&'static str> {
     // The `get` function is unfortunately not const,
     // so we have to check the index manually.
-    if cc as usize > codes::CODES.len() {
+    if cc as usize >= codes::CODES.len() {
         return None;
     }
 
     let cc_values = codes::CODES[cc as usize];
 
-    if id as usize > cc_values.len() {
+    if id as usize >= cc_values.len() {
         return None;
     }
 
