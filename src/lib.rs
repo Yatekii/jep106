@@ -92,3 +92,17 @@ const fn get(cc: u8, id: u8) -> Option<&'static str> {
 
     cc_values[id as usize]
 }
+
+#[test]
+fn test_out_of_bound_access() {
+    let last_valid_cc = codes::CODES.len() - 1;
+
+    let last_valid_id = codes::CODES[last_valid_cc].len() - 1;
+
+    // Verify that acces does not panic. We don't care if this actually a valid entry.
+    let _ = crate::get(last_valid_cc as u8, last_valid_id as u8);
+
+    assert!(crate::get(last_valid_cc as u8, (last_valid_id + 1) as u8).is_none());
+
+    assert!(crate::get((last_valid_cc + 1) as u8, last_valid_id as u8).is_none());
+}
