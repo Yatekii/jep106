@@ -1,3 +1,4 @@
+#![cfg_attr(all(not(feature = "std"), not(test)), no_std)]
 //! This crate provides a means to retrieve the JEDEC manufacturer string
 //! for a corresponding JEP106 ID Code.
 //!
@@ -57,8 +58,8 @@ impl JEP106Code {
     }
 }
 
-impl std::fmt::Debug for JEP106Code {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+impl core::fmt::Debug for JEP106Code {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         write!(
             f,
             "JEP106Code({{ cc: 0x{:02x?}, id: 0x{:02x?} }} => {:?})",
@@ -69,8 +70,8 @@ impl std::fmt::Debug for JEP106Code {
     }
 }
 
-impl std::fmt::Display for JEP106Code {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+impl core::fmt::Display for JEP106Code {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         write!(f, "{}", self.get().unwrap_or("Unknown Manufacturer Code"))
     }
 }
