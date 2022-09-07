@@ -15,5 +15,9 @@ categories = ["embedded", "hardware-support", "development-tools::debugging"]
 keywords = ["jep106", "embedded"]
 license = "MIT OR Apache-2.0"
 
+[features]
+default = ["std"]
+std = []
+
 [dependencies]
-serde = { version = "1.0.101", features = ["derive"] }
+serde = { version = "1.0.101", default-features = false, features = ["derive"] }
