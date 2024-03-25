@@ -4,8 +4,6 @@
 
 [![documentation](https://docs.rs/jep106/badge.svg)](https://docs.rs/jep106)
 
-[![Build Status](https://www.travis-ci.com/Yatekii/jep106.svg)](https://www.travis-ci.com/Yatekii/jep106)
-
 This crate provides a means to retrieve the JEDEC manufacturer string for a corresponding JEP106 ID Code.
 
 All the codes can be found on the page of the JEDEC organization but are presented in as a PDF. This crate contains the parsed data
@@ -15,7 +13,7 @@ The PDF is parsed by the [jep106-parse](https://github.com/Tiwalun/jep106-parser
 
 ## Status
 
-The crate provides the JEP106BE Revision of the codes list which was published in January 2022.
+The crate provides the JEP106BI Revision of the codes list which was published in January 2024.
 
 ## Usage
 
