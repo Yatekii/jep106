@@ -1,6 +1,6 @@
 [package]
 name = "jep106"
-version = "0.2.8"
+version = "0.2.9"
 authors = [
     "Noah Huesser <yatekii@yatekii.ch>",
     "Dominik Boehi <dominik.boehi@gmail.ch>",
