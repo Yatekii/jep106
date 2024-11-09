@@ -11,10 +11,10 @@
 //! # Example
 //!
 //! ```
-//! fn main() {
-//!     let nordic = jep106::JEP106Code::new(0x02, 0x44).get();
-//!     assert_eq!(Some("Nordic VLSI ASA"), nordic);
-//! }
+//!
+//! let nordic = jep106::JEP106Code::new(0x02, 0x44).get();
+//! assert_eq!(Some("Nordic VLSI ASA"), nordic);
+//!
 //! ```
 
 mod codes;

@@ -13,7 +13,7 @@ The PDF is parsed by the [jep106-parse](https://github.com/Tiwalun/jep106-parser
 
 ## Status
 
-The crate provides the JEP106BI Revision of the codes list which was published in January 2024.
+The crate provides the JEP106BK Revision of the codes list which was published in September 2024.
 
 ## Usage
 
@@ -42,11 +42,10 @@ cargo fmt
 
 Licensed under either of
 
- * Apache License, Version 2.0 ([LICENSE-APACHE](LICENSE-APACHE) or
-   http://www.apache.org/licenses/LICENSE-2.0)
- * MIT license ([LICENSE-MIT](LICENSE-MIT) or
-   http://opensource.org/licenses/MIT) at your option.
-
+- Apache License, Version 2.0 ([LICENSE-APACHE](LICENSE-APACHE) or
+  http://www.apache.org/licenses/LICENSE-2.0)
+- MIT license ([LICENSE-MIT](LICENSE-MIT) or
+  http://opensource.org/licenses/MIT) at your option.
 
 ### Contributing
 
