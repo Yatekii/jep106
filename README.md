@@ -1,6 +1,6 @@
 # jep106
 
-[![crates.io](https://img.shields.io/crates/v/probe-rs)](https://crates.io/crates/jep106)
+[![crates.io](https://img.shields.io/crates/v/jep106)](https://crates.io/crates/jep106)
 
 [![documentation](https://docs.rs/jep106/badge.svg)](https://docs.rs/jep106)
 
