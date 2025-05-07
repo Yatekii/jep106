@@ -1,6 +1,6 @@
 {
   "name": "jep106",
-  "version": "0.2.10",
+  "version": "0.3.0",
   "description": "A pollable collection of all JEP106 manufacturer codes.",
   "main": "index.js",
   "directories": {
