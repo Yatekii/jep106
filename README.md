@@ -13,7 +13,7 @@ The PDF is parsed by the [jep106-parse](https://github.com/Tiwalun/jep106-parser
 
 ## Status
 
-The crate provides the JEP106BK Revision of the codes list which was published in September 2024.
+The crate provides the JEP106BL Revision of the codes list which was published in February 2025.
 
 ## Usage
 
