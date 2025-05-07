@@ -1,0 +1,24 @@
+{
+  "name": "jep106",
+  "version": "0.2.10",
+  "description": "A pollable collection of all JEP106 manufacturer codes.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yatekii/jep106.git"
+  },
+  "keywords": [
+    "jep106",
+    "embedded"
+  ],
+  "author": "Noah Huesser <yatekii@yatekii.ch>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Yatekii/jep106/issues"
+  },
+  "homepage": "https://github.com/Yatekii/jep106#readme"
+}
