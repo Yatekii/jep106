@@ -1,6 +1,6 @@
 # jep106
 
-[![crates.io](http://meritbadge.herokuapp.com/jep106)](https://crates.io/crates/jep106)
+[![crates.io](https://img.shields.io/crates/v/probe-rs)](https://crates.io/crates/jep106)
 
 [![documentation](https://docs.rs/jep106/badge.svg)](https://docs.rs/jep106)
 
@@ -31,11 +31,20 @@ processed, check out the [jep106-parse](https://github.com/Tiwalun/jep106-parser
 git clone https://github.com/Tiwalun/jep106-parser.git
 cd jep106-parser
 # Download the latest version of the PDF, say, JEP106BE.pdf
+
+# Rust
 # Then run the following command to parse the PDF and generate the `codes.rs`
 cargo run -- --pdf JEP106BE.pdf --jep_version BE
 # Copy the `codes.rs` to the src/ folder and format it
 mv codes.rs /path/to/jep106/src/codes.rs
 cargo fmt
+
+# NPM/JSON
+# Then run the following command to parse the PDF and generate the `codes.json`
+cargo run -- --pdf JEP106BE.pdf --jep_version BE --format json
+# Copy the `codes.json` to the src/ folder and format it
+mv codes.json /path/to/jep106/src/codes.json
+
 ```
 
 ## License
